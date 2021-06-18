@@ -25,6 +25,6 @@ app.post('/', upload.single('file'),async function(req, res, next){
     data='https://ipfs.io/ipfs/'+hash.toString();
     res.render('index',{data:data})
 })
-app.listen(3000,()=>{
+app.listen(process.env.PORT,()=>{
     console.log('listening at http://localhost:3000')
 })
